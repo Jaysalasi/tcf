@@ -1,56 +1,76 @@
-*{
-	margin: 0;
-	padding:0;
-	font-family: Roboto;
+* {
+    margin: 0;
+    padding: 0;
 }
 
-/*  the style for the homepage starts here */
-header{
-	background-color: #1a5094;
+.navbar {
+    width: 100%;
 }
-header .nav {
-	width: 100%;
-	height: 65px;
-	background-color: linear-gradient (to right, #71b280, #19515f);
-	display: flex;
-	margin: 0;
-}
-.nav .logo {
-	margin-left: 50px;
-	margin-top: 5px;
-}
-.nav .logo p{
-	padding-top: 5px;
-	color: white;
 
+img {
+    padding: 10px;
 }
-.nav .logo h3{
-	color: #EFB413;
 
+nav {
+    width: 100%;
+    height: 80px;
+    background-color: #1a5094;
+    line-height: 80px;
 }
-#menu {
-	margin-left: 400px;
-}	
-#menu li {
-	list-style: none;
-	display: block;
-	float: left;
-	clear: all;
+
+nav ul {
+    float: right;
+    margin-right: 25px;
 }
-#menu li a{
-	display: block;
-	text-transform: uppercase;
-	padding: 5px;
-	margin: 12px 12px;
-	font-size: 12px;
-	color: #000;
-	text-decoration: none;
-	padding-top: 15px;
+
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
 }
-#menu li a:hover {
-	color: white;
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 15px;
+    cursor: pointer;
 }
-.donate-button a {
+
+nav li a:hover {
+	color: #cea00a;
+}
+
+@media (max-width: 1200px) {
+    .bar-tog {
+        display: none;
+    }
+}
+
+@media (max-width: 1000px) {
+    nav {
+        font-size: 0.7em;
+    }
+    .logo {
+        width: 130px;
+        height: auto;
+        padding: 20px;
+    }
+
+   
+}
+
+@media (max-width: 800px) {
+    nav {
+            font-size: 0.3em;
+    }
+    .logo {
+        width: 80px;
+        height: auto;
+        padding: 25px;
+    }
+}
+
+
+    .donate-button a {
 	border-radius: 5px;
 	background-color: #941a58;
 	text-decoration: none;
@@ -58,19 +78,163 @@ header .nav {
 	padding: 10px 20px !important;
 	box-shadow: 2px 4px 6px #2f2f2e;
 }
+
+.donate-button a:hover {
+	color: #cea00a !important;
+	background-color: #fff;
+}
+
+
 .header-content {
 	background-image: url('images/banner.jpg');
 	width: 100%;
-	height: 700px;
+	height: 100vh;
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
+
 .text-area{
 	color: #fff;
 	padding-left: 200px;
 	padding-top: 200px;
 }
+
+@media (max-width: 900px) {
+    .bar-tog {
+        display: block;
+        width: 100px;
+        height: auto;
+        margin: 10px;
+        background: #fff;
+        float: right;
+        cursor: pointer;
+        text-align: center;
+        font-size: 20px;
+        color: #1a5094;
+    }
+
+    .bar-tog {
+        width: 40px;
+        height: 40px;
+    }
+
+    .bar-tog:before {
+        content: 'x';
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .bar-tog.active:before {
+        content: '-';
+    }
+
+    .logo {
+        padding-left: 300px;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .menu.active {
+        display: block;
+    }
+
+    .menu.active ul {
+        display: block;
+    }
+
+    .text-area {
+        padding-left: 50px;
+        padding-top: 200px;
+    }
+}
+
+
+@media (max-width: 800px) {
+    .bar-tog {
+        display: block;
+        width: 100px;
+        height: auto;
+        margin: 10px;
+        background: #fff;
+        float: right;
+        cursor: pointer;
+        text-align: center;
+        font-size: 20px;
+        color: #1a5094;
+    }
+
+    .bar-tog {
+        width: 40px;
+        height: 40px;
+    }
+
+    .bar-tog:before {
+        content: 'x';
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .bar-tog.active:before {
+        content: '-';
+    }
+
+    .logo {
+        padding-left: 200px;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .menu.active {
+        display: block;
+    }
+
+    .menu.active ul {
+        display: block;
+    }
+
+    .text-area {
+        padding-left: 50px;
+        padding-top: 200px;
+    }
+}
+
+
+    /* .bar-tog {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 80px;
+        background-color: #1a5094;
+        line-height: 80px;
+        float: right;
+        margin-right: 25px;
+        list-style-type: none;
+    } */
+    
+
+    .text-area {
+        padding-left: 50px;
+        padding-top: 200px;
+    }
+}
+
+@media (max-width: 500px) {
+    .text-area {
+        padding-left: 20px;
+        padding-top: 200px;
+    }
+}
+
+@media (max-width: 320px) {
+    .text-area {
+        padding-left: 10px;
+        padding-top: 100px;
+    }
+}
+
 .text-area h1 {
 	padding-bottom: 5px;
 	color: #eaeaea;
@@ -94,179 +258,3 @@ header .nav {
 	padding: 10px;
 	box-shadow: 2px 4px 6px #2f2f2e;
 }
-.button a:hover {
-
-}
-/*  the style for the homepage ends here */
-
-#sitebanner img{
-	width: 100%;
-	height: 750px;
-	object-fit: cover;
-	display: inline-flex;
-	margin-top: 75px;
-	float: left;
-}
-/*#homepagecontent{
-	width: 100%;
-	height: 300px;
-	display: inline-flex;
-	margin: 0 auto;
-	background-color: #331D2E;
-}*/
-
-/* this is the style for the vision and mission statements */
-.homepagestatements{
-	padding: 50px;
-	width: 700px;
-	height: 250px;
-	color: white;
-	float: left;
-	position: absolute;
-	margin: auto;
-	text-shadow: 1px 1px #331D2E;
-}
-
-.homepagestatements p{
-	text-align: justify;
-	font-family:sans-serif;
-	padding: 15px;
-	line-height: 25px;
-}
-.homepagestatements h3{
-	padding: 5px;
-	color:yellow;
-}
-#vision-text{
-	margin-top: 190px;
-	margin-left: 70px;
-	font-size: 17px;
-
-}
-#mission-text{
-	margin-top: 400px;
-	margin-left: 70px;
-	font-size: 17px;
-}
-#footer{
-	width: 100%;
-	height: 150px
-	background-color:black;
-	box-sizing: border-box;
-	float: left;
-	margin: 0 auto;
-	display: inline-flex;
-}
-
-/* this is the style for volunteer page it starts here*/
-#volunteer-banner img{
-	width: 100%;
-	height: 550px;
-	object-fit: cover;
-	display: inline-flex;
-	margin-top: 0 auto;
-	box-sizing: border-box;
-}
-#why-volunteer{
-	width: 100%;
-	height: 450px;
-	display: inline-flex;
-	margin: 0 auto;
-	background-color: #331D2E;
-	position:absolute;
-}
-#form-container{
-	width: 1024px;
-	height: 100%;
-	float: left;
-	position: relative;
-	background-color: #331D2E
-	margin:auto;
-	left: 150px;
-	right: 50px;
-}
-
-/* this is the signup section on volunteer page*/
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: black;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-/* Add padding to containers */
-.container {
-  padding: 16px;
-  background-color: white;
-}
-.container h1{
-	color: #D17A10;
-}
-
-/* Full-width input fields */
-input[type=text], input[type=password] {
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  display: inline-block;
-  border: none;
-  background: #f1f1f1;
-}
-
-input[type=text]:focus, input[type=password]:focus {
-  background-color: #ddd;
-  outline: none;
-}
-
-/* Overwrite default styles of hr */
-hr {
-  border: 1px solid #f1f1f1;
-  margin-bottom: 25px;
-}
-
-/* Set a style for the submit button */
-.registerbtn {
-  background-color: #4CAF50;
-  color: white;
-  padding: 16px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  opacity: 0.9;
-}
-
-.registerbtn:hover {
-  opacity: 1;
-}
-
-/* Add a blue text color to links */
-a {
-  color: dodgerblue;
-}
-
-/* Set a grey background color and center the text of the "sign in" section */
-.signin {
-  background-color: #f1f1f1;
-  text-align: center;
-}
-</style>
-
-
-/* style for volunteer page ends here */
-
-/* style for donate page starts here */
-#rave{
-	width: 800px;
-	height: 750px;
-	position: absolute;
-	float: left;
-	box-sizing: border-box;
-	margin: 0 auto;
-	background-color: white;
-}
-/* style for team page starts here */
-
